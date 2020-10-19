@@ -1,0 +1,53 @@
+<html>
+  <style>
+
+div{
+  width: 300px;
+  height: 160px;
+  border:5px solid pink;
+  position:relative;
+  overflow: hidden;
+}
+img{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  left: 100%;
+  transition: 1s;
+}
+input:nth-child(1):checked ~ div a:nth-child(1) ,
+input:nth-child(2):checked ~ div a:nth-child(2) ,
+input:nth-child(3):checked ~ div a:nth-child(3) ,
+input:nth-child(4):checked ~ div a:nth-child(4) ,
+input:nth-child(5):checked ~ div a:nth-child(5) {
+left: 0%;
+}
+  </style>
+  <body>
+    <section>
+      <input type="radio" name="solider" id="s-1"checked>
+      <input type="radio" name="solider" id="s-2">
+      <input type="radio" name="solider" id="s-3">
+      <input type="radio" name="solider" id="s-4">
+      <input type="radio" name="solider" id="s-5">
+    <div>
+      <a href="#"><img src="https://img.lexus.com.cn/images/lc-overview-4-1226-2880x1480.jpg" alt="">
+        <table for="s-5"><</table>
+        <table for="s-2">></table>
+      <a href="#"><img src="https://img.lexus.com.cn/images/lc/lc-overview-1-2880x1480.jpg" alt="">
+        <table for="s-1"><</table>
+        <table for="s-3">></table>
+      </a>
+      <a href="#"><img src="https://img.lexus.com.cn/images/ls-overview-1-1225-2880x1480.jpg" alt="">
+        <table for="s-2"><</table>
+        <table for="s-4">></table>
+      <a href="#"><img src="https://img.lexus.com.cn/images/ls-overview-4-190426-2880x1480.jpg" alt="">
+          <table for="s-3"><</table>
+          <table for="s-5">></table>
+      <a href="#"><img src="https://img.lexus.com.cn/images/rc-overview-3-181212-2880x1480.jpg" alt="">
+        <table for="s-4"><</table>
+        <table for="s-1">></table>
+    </div>
+  </section>
+  </body>
+</html>
