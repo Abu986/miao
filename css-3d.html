@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   @keyframes z{
+    0%{
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100%{
+      transform:rotateX(360deg) rotateY(3600deg) rotateZ(7200deg);
+    }
+  }*
+  *{
+    margin: 0;
+    padding: 0;      
+}
+.box{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 200px auto;
+  border: transparent;
+  transform-style: preserve-3d;
+  animation-name:z;
+  animation-duration:20s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.d3-box>li{
+  list-style: none;
+
+}
+.d3-box>li{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin:auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid pink;
+  position: absolute;
+}
+.d3-box li:nth-child(1){
+  transform:translateY(-100px) rotateX(90deg) ;
+  background-color: tomato;
+}
+.d3-box li:nth-child(2){
+  transform:translateY(100px) rotateX(90deg)  ;
+  background-color: black;
+}
+.d3-box li:nth-child(3){
+  transform:translateX(-100px) rotateY(90deg) ;
+  background-color: wheat;
+}
+.d3-box li:nth-child(4){
+  transform:translateX(100px) rotateY(90deg) ;
+  background-color: green;
+}
+.d3-box li:nth-child(5){
+  transform:translateZ(-100px);
+  background-color: blue;
+}
+.d3-box li:nth-child(6){
+  transform: translateZ(100px);
+  background-color: red;
+}
+</style>
+<body>
+  <div class="box">
+    <ui class="d3-box">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ui>
+ </div>
+</body>
+</html>

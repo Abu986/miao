@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.a{
+  margin-top: 300px;
+  margin-left:300px;
+  width: 500px;
+  height: 50px;
+  xbackground-color: pink;
+  animation-name:z;
+  animation-duration:20s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.b{
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation-name:b;
+  animation-duration:20s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+  position: absolute;
+}
+@keyframes z{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+@keyframes b{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(-360deg);
+    }
+  }
+</style>
+<body>
+  <div class="a">
+    <div class="b"></div>
+  </div>
+</body>
+</html>

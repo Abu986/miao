@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clock</title>
+</head>
+<style>
+  body{
+  margin:10px solid pink;
+  padding:0;
+}
+.left{
+  width:80px;
+  height:380px;
+  background-color: grey;
+  border-radius:100%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.right{
+   width:80px;
+  height:380px;
+  background-color: grey;
+  border-radius:100%;
+  margin-top:-380px;
+  margin-left:250px;
+}
+.outline{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+  border-radius:100%;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+.inside{
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background-color: #fff;
+  border-radius:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.pointer>span{
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  xborder:1px solid black;
+}
+.pointer>span:nth-child(n +61 ){
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  text-align: center;
+}
+.pointer>span:nth-child(-n + 60)::before{
+  content: "";
+  width: 3px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+}
+.pointer>span:nth-child(5n)::before{
+  content: "";
+  width: 6px;
+  height: 12px;
+  background-color: black;
+  position: absolute;
+  margin:auto;
+  top:0;
+  left:0;
+  right:0;
+}
+.pointer>span:nth-child(1){
+  transform: rotate(6deg);
+}
+.pointer>span:nth-child(2){
+  transform: rotate(12deg);
+}
+.pointer>span:nth-child(3){
+  transform: rotate(18deg);
+}
+.pointer>span:nth-child(4){
+  transform: rotate(24deg);
+}
+.pointer>span:nth-child(5){
+  transform: rotate(30deg);
+}
+.pointer>span:nth-child(6){
+  transform: rotate(36deg);
+}
+.pointer>span:nth-child(7){
+  transform: rotate(42deg);
+}
+.pointer>span:nth-child(8){
+  transform: rotate(48deg);
+}
+.pointer>span:nth-child(9){
+  transform: rotate(54deg);
+}
+.pointer>span:nth-child(10){
+  transform: rotate(60deg);
+}
+.pointer>span:nth-child(11){
+  transform: rotate(66deg);
+}
+.pointer>span:nth-child(12){
+  transform: rotate(72deg);
+}
+.pointer>span:nth-child(13){
+  transform: rotate(78deg);
+}
+.pointer>span:nth-child(14){
+  transform: rotate(84deg);
+}
+.pointer>span:nth-child(15){
+  transform: rotate(90deg);
+}
+.pointer>span:nth-child(16){
+  transform: rotate(96deg);
+}
+.pointer>span:nth-child(17){
+  transform: rotate(102deg);
+}
+.pointer>span:nth-child(18){
+  transform: rotate(108deg);
+}
+.pointer>span:nth-child(19){
+  transform: rotate(114deg);
+}
+.pointer>span:nth-child(20){
+  transform: rotate(120deg);
+}
+.pointer>span:nth-child(21){
+  transform: rotate(126deg);
+}
+.pointer>span:nth-child(22){
+  transform: rotate(132deg);
+}
+.pointer>span:nth-child(23){
+  transform: rotate(138deg);
+}
+.pointer>span:nth-child(24){
+  transform: rotate(144deg);
+}
+.pointer>span:nth-child(25){
+  transform: rotate(150deg);
+}
+.pointer>span:nth-child(26){
+  transform: rotate(156deg);
+}
+.pointer>span:nth-child(27){
+  transform: rotate(162deg);
+}
+.pointer>span:nth-child(28){
+  transform: rotate(168deg);
+}
+.pointer>span:nth-child(29){
+  transform: rotate(174deg);
+}
+.pointer>span:nth-child(30){
+  transform: rotate(180deg);
+}
+.pointer>span:nth-child(31){
+  transform: rotate(186deg);
+}
+.pointer>span:nth-child(32){
+  transform: rotate(192deg);
+}
+.pointer>span:nth-child(33){
+  transform: rotate(198deg);
+}
+.pointer>span:nth-child(34){
+  transform: rotate(204deg);
+}
+.pointer>span:nth-child(35){
+  transform: rotate(210deg);
+}
+.pointer>span:nth-child(36){
+  transform: rotate(216deg);
+}
+.pointer>span:nth-child(37){
+  transform: rotate(222deg);
+}
+.pointer>span:nth-child(38){
+  transform: rotate(228deg);
+}
+.pointer>span:nth-child(39){
+  transform: rotate(234deg);
+}
+.pointer>span:nth-child(40){
+  transform: rotate(240deg);
+}
+.pointer>span:nth-child(41){
+  transform: rotate(246deg);
+}
+.pointer>span:nth-child(42){
+  transform: rotate(252deg);
+}
+.pointer>span:nth-child(43){
+  transform: rotate(258deg);
+}
+.pointer>span:nth-child(44){
+  transform: rotate(264deg);
+}
+.pointer>span:nth-child(45){
+  transform: rotate(270deg);
+}
+.pointer>span:nth-child(46){
+  transform: rotate(276deg);
+}
+.pointer>span:nth-child(47){
+  transform: rotate(282deg);
+}
+.pointer>span:nth-child(48){
+  transform: rotate(288deg);
+}
+.pointer>span:nth-child(49){
+  transform: rotate(294deg);
+}
+.pointer>span:nth-child(50){
+  transform: rotate(300deg);
+}
+.pointer>span:nth-child(51){
+  transform: rotate(306deg);
+}
+.pointer>span:nth-child(52){
+  transform: rotate(312deg);
+}
+.pointer>span:nth-child(53){
+  transform: rotate(318deg);
+}
+.pointer>span:nth-child(54){
+  transform: rotate(324deg);
+}
+.pointer>span:nth-child(55){
+  transform: rotate(330deg);
+}
+.pointer>span:nth-child(56){
+  transform: rotate(336deg);
+}
+.pointer>span:nth-child(57){
+  transform: rotate(342deg);
+}
+.pointer>span:nth-child(58){
+  transform: rotate(348deg);
+}
+.pointer>span:nth-child(59){
+  transform: rotate(354deg);
+}
+.pointer>span:nth-child(60){
+  transform: rotate(360deg);
+}
+.pointer>span:nth-child(61){
+  transform: translate(155px);
+}
+.pointer>span:nth-child(62){
+  transform: rotate(90deg) translate(155px) rotate(-90deg);
+}
+.pointer>span:nth-child(63){
+  transform: translate(-155px) ;
+}
+.pointer>span:nth-child(64){
+  transform: rotate(270deg) translate(155px) rotate(-270deg);
+}
+.hour{
+  position: absolute;
+  width: 8px;
+  height: 70px;
+  background-color: black;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-bottom: 180px;
+  border-radius:10%;
+  transform-origin:left bottom;
+  animation-name:hour;
+  animation-duration:216000s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.minute{
+  position: absolute;
+  width: 6px;
+  height: 100px;
+  background-color: black;
+  border-radius:10%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top: 80px;
+  transform-origin:left bottom;
+  animation-name:minute;
+  animation-duration:3600s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.second{
+  position: absolute;
+  width: 3px;
+  height: 130px;
+  background-color: red;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top: 50px;
+  transform-origin:left bottom;
+  animation-name:second;
+  animation-duration:60s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  animation-fill-mode:both;
+}
+.center{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: grey;
+  border-radius:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.dot{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+@keyframes second{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes minute{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+@keyframes hour{
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+</style>
+<body>
+  <div class="outline">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="inside">
+      <div class="pointer">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>3</span>
+        <span>6</span>
+        <span>9</span>
+        <span>12</span>
+      </div>
+      <div class="center"></div>
+      <div class="hour"></div>
+      <div class="minute"></div>
+      <div class="second"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</body>
+</html>

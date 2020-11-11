@@ -1,0 +1,322 @@
+<html>
+  <style>
+    html,body{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+    .head-a{
+      background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a2a9e6db5e3c5374301827435d8595c6.jpg?w=5120&h=240);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 120px;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+    }
+    .head-b{
+      background-color: black;
+      width: 100%;
+      z-index: 9999;
+    }
+    .head-ba{
+      width: 1230px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .head-b,.head-b-a{
+      float: left;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+    }
+    .head-b-a>a,.head-b-b>a{
+      display: inline-block;
+      color: grey;
+      text-decoration: none;
+      font-size: 12px;
+      height: 40px;
+    }
+    .head-b-a>a>span{
+      display: none;
+      position:absolute;
+      width: 124px;
+      top: 40px;
+      height: 0;
+      background: #fff;
+      margin-left: -45px;
+      box-shadow: 0 1px 5px #aaa;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      xline-height: 1;
+      xborder: 2px solid black;
+    }
+    .head-b-a>a>span>img{
+      width: 90px;
+      height: 90px;
+      margin: 17px;
+      xmargin-right: 17px;
+    }
+    .head-b-a>a:hover span {
+      display: block;
+    }
+    .head-b-a>a:hover{
+      color: white;
+    }
+    .head-b-b>a:hover{
+      color: white;
+    }
+    .head-b-b{
+      float: right;
+    }
+    .head-c{
+      position: relative;
+      height: 100px;
+      line-height: 40px;
+      margin-top: 40px;
+
+    }
+    .head-c-a{
+      display: block;
+      width: 1230px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .head-c-aa{
+      float: left;
+      width: 57px;
+      height: 57px;
+      background-color: rgb(255, 103, 0);
+      line-height: 20px;
+      margin-top: 23px;
+    }
+    .head-c-aa>span{
+      display: inline-block;
+      width: 114px;
+      height: 57px;
+      transition: 1s;
+      margin-left: -57px;
+    }
+    .head-c-aa>span>img{
+      display: block;
+      width: 57px;
+      height: 57px;
+    }
+    .head-c-aa>span>img:nth-child(2){
+      margin-left: 57px;
+      margin-top: -57px;
+    }
+    .head-c-aa>span:hover {
+      margin-left: 0;
+    }
+    .head-c-ab{
+      float: left;
+      display: block;
+      width: 850px;
+      height: 100%;
+      position: relative;
+    }
+    .head-c-ab>ul{
+      xposition: relative;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      display: inline-block;
+      list-style: none;
+    }
+    .head-c-ab>ul>li{
+      float: left;
+      margin-left: 15px;
+      margin-top: 30px;
+      font-size: 17px;
+      text-align: center;
+      xdisplay: inline-block;
+    }
+    .head-c-ab>ul>li>a{
+      color: black;
+      text-decoration: none;
+    }
+    .head-c-ab>ul>li>div{
+      position: absolute;
+      xwidth: 999999px;
+      padding: cale(50% - 1226/2);
+      height: 231px;
+      background-color: cornflowerblue;
+      display: none;
+    }
+    .head-c-ab>ul>li:hover .head-c-ab>ul>li>ul{
+      display: inline-block;
+      height: 231px;
+      xwidth: 999999px;
+
+      border:2px solid black;
+    }
+    .head-c-ab>ul>li>div::before{
+      background-color: grey;
+      background-size: 2px;
+    }
+    
+    .head-c-ab>ul>li:nth-child(1){
+      width: 170px;
+    }
+    .head-c-ab>ul>li:hover,
+    .head-c-ab>ul>li>a:hover{
+      color:  rgb(255, 103, 0);
+    }
+    .head-c-ab>ul>li>span:hover {
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div id="mi">
+      <div class="head">
+        <div class="head-a">
+        </div>
+        <div class="head-b">
+          <div class="head-ba">
+          <div class="head-b-a">
+          <a href="https://www.mi.com/">小米商城</a>
+          <span>|</span>
+          <a href="https://home.miui.com/">MIUI</a>
+          <span>|</span>
+          <a href="https://iot.mi.com/new/">loT</a>
+          <span>|</span>
+          <a href="https://i.mi.com/">云服务</a>
+          <span>|</span>
+          <a href="https://jr.mi.com/">金融</a>
+          <span>|</span>
+          <a href="https://youpin.mi.com/">有品</a>
+          <span>|</span>
+          <a href="https://xiaoai.mi.com/">小爱开放平台</a>
+          <span>|</span>
+          <a href="https://qiye.mi.com/">企业团购</a>
+          <span>|</span>
+          <a href="https://www.mi.com/aptitude/list/?id=41">资质证照</a>
+          <span>|</span>
+          <a href="https://www.mi.com/aptitude/list/">协议规则</a>
+          <span>|</span>
+          <a href="https://www.mi.com/appdownload/">下载APP
+              <span>
+                <img src="img/download.png" alt="">小米商城APP
+              </span>
+          </a>
+          <span>|</span>
+          <a href="https://xiaomishare.mi.com/?from=micom">智能生活</a>
+          <span>|</span>
+          <a href="">Select Location</a>
+          </div>
+
+          <div class="head-b-b">
+            <a href="javascript:void(0);">登录</a>
+            <span>|</span>
+            <a href="javascript:void(0);">注册</a>
+            <span>|</span>
+            <a href="javascript:void(0);">消息通知</a>
+          </div>
+          </div>
+        </div>
+        <div class="head-c">
+          <div class="head-c-a">
+            <div class="head-c-aa">
+              <span>
+              <img src="img/mi-home.png" alt="">
+              <img src="img/mi-logo.png" alt="">
+              </span>
+            </div>
+          </div>
+          <div class="head-c-ab">
+            <ul>
+              <li><a href="#"></a>
+              </li>
+              <li><a href="#">小米手机</a>
+                <div></div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+              </li>
+              <li><a href="#">Redmi 红米</a>
+                <div></div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+              </li>
+              <li><a href="#">电视</a>
+                <div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul></div>
+              </li>
+              <li><a href="#">笔记本</a>
+                <div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul></div>
+              </li>
+              <li><a href="#">家电</a>
+                <div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul></div>
+              </li>
+              <li><a href="#">路由器</a>
+                <div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul></div>
+              </li>
+              <li><a href="#">智能硬件</a>
+                <div>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul></div>
+              </li>
+              <li> <a href="https://www.mi.com/service/"><span>服务</span></a></li>
+              <li><a href="http://www.xiaomi.cn/"><span>社区</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
