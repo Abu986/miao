@@ -18,6 +18,16 @@ var abu986=(function(){
     }
     return res
   }
+  function concat(ary, ...args) {
+    var res = [...ary];
+    for (var i = 0; i < args.length; i++) {
+        if (Array.isArray(args[i])) {
+            res.push(...args[i]);
+        } else {
+            res.push(args[i]);
+        }
+    }
+  }
   function join(array,separator){
     var res=''
     for(var i=0;i<array.length-1;i++){
@@ -58,11 +68,27 @@ var abu986=(function(){
       for(var i=start;i<end;i++){
         array[i]=value
       }
-      return array
     }
     return array
   }
-  function findIndex(array,predicate,fromIndex)
+  function findIndex(array,predicate,fromIndex){
 
+  }
+  function findLastIndex(array,predicate,fromIndex){
+
+  }
+  return{
+    chunk,
+    compact,
+    concat,
+    join,
+    last,
+    lastIndexOf,
+    drop,
+    dropRightWhile,
+    fill,
+    findIndex,
+    findLastIndex,
+  }
 
 })();
