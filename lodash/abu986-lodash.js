@@ -1,4 +1,4 @@
-var abu986=function(){
+var abu986=(function(){
   function chunk(array,size){
     var res=[]
     if(!array||size<1){
@@ -50,6 +50,19 @@ var abu986=function(){
     return res
   }
   function dropRightWhile(array,predicate){
-
+   
   }
-}()
+  function fill(array,value,start,end){
+    var a=end-start
+    if(a>0){
+      for(var i=start;i<end;i++){
+        array[i]=value
+      }
+      return array
+    }
+    return array
+  }
+  function findIndex(array,predicate,fromIndex)
+
+
+})();
