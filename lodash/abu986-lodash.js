@@ -1,4 +1,4 @@
-var abu986=(function(){
+var abu986 = (function () {
   function chunk(array,size){
     var res=[]
     if(!array||size<1){
@@ -77,7 +77,7 @@ var abu986=(function(){
   function findLastIndex(array,predicate,fromIndex){
 
   }
-  return{
+  return {
     chunk,
     compact,
     concat,
@@ -89,6 +89,5 @@ var abu986=(function(){
     fill,
     findIndex,
     findLastIndex,
-  }
-
+  };
 })();
