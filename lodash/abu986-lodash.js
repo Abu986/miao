@@ -48,35 +48,29 @@ var abu986 = (function () {
     return -1
   }
   function drop(array,n){
-    if(!n){
-      n=1
-    }
-    if(n>=array.length){
-      return []
-    }var res=[]
+    var res=[]
     for(var i=n;i<array.length;i++){
       res.push(array[i])
     }
     return res
   }
+  function dropRight(array,n){
+    if(n>=array.length){
+      return []
+    }
+    array.length=array.length-n
+    return array
+  }
   function dropRightWhile(array,predicate){
    
   }
-  function fill(array,value,start,end){
-    var a=end-start
-    if(a>0){
+  function fill(array,value,start=0,end=array.length){
       for(var i=start;i<end;i++){
         array[i]=value
       }
-    }
     return array
   }
-  function findIndex(array,predicate,fromIndex){
-
-  }
-  function findLastIndex(array,predicate,fromIndex){
-
-  }
+ 
   function flatten(array){
     var res=[]
     for(var i=0;i<array.length;i++){
@@ -111,6 +105,33 @@ var abu986 = (function () {
         }res.push(item)
       }
       return res*/
+    } 
+    function fromPairs(pairs){
+      var res={}
+      for(var i=0;i<pairs.length;i++){
+        res[pairs[i][0]]=pairs[i][1]
+      }
+      return res
+    }
+    function head(array){
+      if(!array){
+        return []
+      }
+      return array[0]
+    }
+    function indexOf(array,value,fromIndex=0){
+      for(var i=fromIndex;i<array.length;i++){
+        if(array[i]==value){
+          return i
+        }
+      }
+      return -1
+    }
+    function findIndex(array,predicate,fromIndex){
+
+    }
+    function findLastIndex(array,predicate,fromIndex){
+
     }
   return {
     chunk,
@@ -120,6 +141,7 @@ var abu986 = (function () {
     last,
     lastIndexOf,
     drop,
+    dropRight,
     dropRightWhile,
     fill,
     findIndex,
