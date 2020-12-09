@@ -77,6 +77,41 @@ var abu986 = (function () {
   function findLastIndex(array,predicate,fromIndex){
 
   }
+  function flatten(array){
+    var res=[]
+    for(var i=0;i<array.length;i++){
+      if(Array.isArray(array[i])){
+        res.push(...array[i])
+      }else{
+        res.push(array[i])
+      }
+    }
+    return res
+  }
+  function flattenDeep(array){
+    var res=[]
+    for(var i=0;i<array.length;i++){
+      var item=array[i]
+      if(Array.isArray(item)){
+        res.push(...flattenDeep(item))
+      }res.push(item)
+    }
+    return res
+  }
+  function flattenDepth(array,depth){
+    for(var i=0;i<depth;i++){
+      flatten(array)
+    }
+    return array
+    /*var res=[]
+    for(var i=0;i<array.length;i++){
+      var item=array[i]
+      if(Array.isArray(item&&depth>=a)){
+        res.push(...flattenDepth(item))
+        }res.push(item)
+      }
+      return res*/
+    }
   return {
     chunk,
     compact,
@@ -89,5 +124,8 @@ var abu986 = (function () {
     fill,
     findIndex,
     findLastIndex,
+    flatten,
+    flattenDeep,
+    flattenDepth,
   };
 })();
